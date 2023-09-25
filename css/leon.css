@@ -514,7 +514,7 @@ header .links ul li:not(:last-child) a
         font-size: 10px;
         text-wrap: nowrap;
     }
-    .contact-contant .social i
+    .contact-contant .social a
     {
         padding: 0 10px;
     }
