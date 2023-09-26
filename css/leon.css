@@ -501,7 +501,6 @@ header .links ul li:not(:last-child) a
     align-items: center;
     padding-left: 50px;
 }
-
 .contact-contant .social i
 {
     padding: 0 20px;
@@ -512,11 +511,10 @@ header .links ul li:not(:last-child) a
     .contact-contant .social p 
     {
         font-size: 10px;
-        text-wrap: nowrap;
     }
-    .contact-contant .social i
+    .contact-contant .social a
     {
-        padding: 0 10px;
+        padding: 0 0px;
     }
 }
 /* END CONTACT  */
