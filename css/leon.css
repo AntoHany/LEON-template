@@ -8,6 +8,18 @@
 }
 /* END VARIABLE */
 
+/* START SCROLLBAR*/
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+::-webkit-scrollbar-track{
+    background-color: #e4e4e4;
+}
+/* END SCROLLBAR*/
+
 /* START SPECIAL-HEADING */
 .special-heading
 {
@@ -22,7 +34,7 @@
 {
     text-align: center;
     margin-top: -35px;
-    font-size: 17px;
+    font-size: 18px;
     letter-spacing: -1px;
 
 }
@@ -143,7 +155,7 @@ header .links .icon span:nth-child(2)
 }
 header .links:hover .icon span:nth-child(2) 
 {
-    display: none;
+    opacity: 0;
 }
 header .links:hover .icon span:first-child
 {
@@ -169,7 +181,6 @@ header .links ul
     display: none;
     z-index: 1;
 }
-
 header .links ul::before
 {
     content: "";
@@ -183,8 +194,16 @@ header .links:hover  ul
 {
     display: block;
 }
+header .links ul li{
+    transition: .3s ease;
+}
+header .links ul li:hover a{
+    background-color: #e4e4e4;
+    color: var(--main-color);
+}
 header .links ul li a
 {
+    text-transform: capitalize;
     display: block;
     padding: 15px;
     color: #333;
@@ -354,6 +373,33 @@ header .links ul li:not(:last-child) a
     gap: 30px;
     margin-top: 80px;
 }
+.portfolio .project .card .image{
+    position: relative;
+    overflow: hidden;
+}
+.portfolio .project .card .image::before{
+    content: "";
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.portfolio .project .card .image:hover::before{
+    animation: hover-image .5s ease;
+}
+@keyframes hover-image {
+    from{
+        width: 50%;
+        height: 50%;
+    }
+    to{
+        width: 200%;
+        height: 200%;
+    }
+}
 .portfolio .project .card img
 {
     max-width: 100%;
@@ -509,27 +555,29 @@ header .links ul li:not(:last-child) a
     padding: 0 20px;
     color: var(--secondary-color);
 }
+.contact-contant .social i:hover{
+    color: var(--main-color);
+}
 @media (max-width:767px)
 {
     .contact
     {
-<<<<<<< HEAD
         text-align: center;
     }
     .contact-contant .social
     {
+        display: block;
+        align-items: center;
         padding-left: 0;
     }
     .contact-contant a
     {
         padding-left: 0;
-=======
         font-size: 10px;
     }
     .contact-contant .social a
     {
         padding: 0 0px;
->>>>>>> 03e761d74fdda576a8dcd829d089aa7a791077ae
     }
 }
 /* END CONTACT  */
@@ -537,7 +585,7 @@ header .links ul li:not(:last-child) a
 footer
 {
     background-color: var(--secondary-color);
-    height: 60px;
+    height: 50px;
     color: white;
     padding: 18px;
     font-size: large;
@@ -547,6 +595,6 @@ footer span
 { 
     color: var(--main-color);
     font-weight: 600;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 /* END FOOTER  */
