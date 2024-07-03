@@ -5,5 +5,4 @@
 
 #### responsive website
 
-see dimo
-https://antohany.github.io/LEON-template/
+##Take a LOOK => https://antohany.github.io/LEON-template/
